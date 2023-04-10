@@ -1,5 +1,5 @@
 import adapter from '@sveltejs/adapter-static';
-
+const dev = process.argv.includes('dev');
 /** @type {import('@sveltejs/kit').Config} */
 export default {
 	kit: {
@@ -12,6 +12,9 @@ export default {
 		envPrefix: '',
 		polyfill: true,
 		fallback: 'index.html'
-	  })
+	  }),
+	  paths: {
+		base: dev ? '' : '/psyexp_nk_oddball',
+	  }
 	}
   };
