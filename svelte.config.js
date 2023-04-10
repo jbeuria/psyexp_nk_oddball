@@ -5,7 +5,9 @@ export default {
 	kit: {
 	  adapter: adapter({
 		// default options are shown
-		out: 'build',
+		out: 'docs',
+		pages: 'docs',
+		assets: 'docs',
 		precompress: true,
 		envPrefix: '',
 		polyfill: true,
