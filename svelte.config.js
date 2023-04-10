@@ -8,7 +8,8 @@ export default {
 		out: 'build',
 		precompress: true,
 		envPrefix: '',
-		polyfill: true
+		polyfill: true,
+		fallback: 'index.html'
 	  })
 	}
   };

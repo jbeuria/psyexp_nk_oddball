@@ -1,0 +1,9 @@
+import{S as K,i as M,s as S,I as p,P as c}from"../chunks/index.61cd7198.js";import{i as q,A as h,P as x,H as _}from"../chunks/jspsych.44488363.js";import"../chunks/muse.5bbc7ee0.js";import{g,s as y,m as d}from"../chunks/store.8b8872e6.js";function T(t,u,n){let a,o,m;p(t,d,e=>n(3,a=e)),p(t,g,e=>n(4,o=e)),p(t,y,e=>n(5,m=e));let{data:r}=u;c(g,o=r.group,o),c(y,m=r.stage,m);const f=q({show_progress_bar:!0});let s=[];const P={type:x,auto_preload:!0};s.push(P);let b={type:_,stimulus:`<h1> Welcome to the experiment.<h1> 
+        <h1 style='color:blue'> Press any key to start the self reflective questions</h1>
+        <ul> 
+            <li>The duration of each will be for 30 seconds</li> 
+            <li>Please close your eyes and hear the question being asked <li> 
+            <li>Then, you will have to contemplate on the answer mentally without opening eyes</li>
+            <li>Please do not sleep </li>
+        </ul>
+        `};s.push(b);let i=0,l=[];o=="N"?l=["/audio/assessment/N/1.mp3","/audio/assessment/N/2.mp3","/audio/assessment/N/3.mp3","/audio/assessment/N/4.mp3"]:o=="M"&&(l=["/audio/assessment/M/1.mp3","/audio/assessment/M/2.mp3","/audio/assessment/M/3.mp3","/audio/assessment/M/4.mp3"]);const w={timeline:[{type:h,stimulus:l[i],choices:"NO_KEYS",post_trial_gap:1e3,trial_ends_after_audio:!0,on_start:()=>{let e={timestamp:new Date().getTime()/1e3,marker:301+i};a.push(e),d.set(a)},on_finish:()=>{let e={timestamp:new Date().getTime()/1e3,marker:320+i};a.push(e),d.set(a),i+=1}}],timeline_variables:i,repetitions:l.length,randomize_order:!0};s.push(w);const N={type:h,stimulus:"/audio/assessment/open_eyes.mp3",choices:"NO_KEYS",post_trial_gap:1e3,trial_ends_after_audio:!0};s.push(N);const k={type:_,stimulus:"<a href='/oddball' >Click to proceed to the last stage</a>",choices:"NO_KEYS"};return s.push(k),f.run(s),t.$$set=e=>{"data"in e&&n(0,r=e.data)},[r]}class C extends K{constructor(u){super(),M(this,u,T,null,S,{data:0})}}export{C as default};
