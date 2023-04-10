@@ -1,0 +1,1 @@
+import{g as o}from"./store.8b8872e6.js";function t({params:g,url:r}){let e;return o.subscribe(a=>{e=a}),r.searchParams.get("group")&&(e=r.searchParams.get("group")),{group:e,stage:2}}const p=Object.freeze(Object.defineProperty({__proto__:null,load:t},Symbol.toStringTag,{value:"Module"}));export{p as _,t as l};
